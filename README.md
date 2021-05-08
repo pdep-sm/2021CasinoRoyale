@@ -1,7 +1,6 @@
-# ejercicio-alumno
+# Casino Royale
 
 ## Integrantes
 
-- integrante1 (usuario github)
-- integrante2 (usuario github)
-...
+- Todo el curso
+- Codeado por: Matías Freyre
