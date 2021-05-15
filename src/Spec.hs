@@ -18,6 +18,7 @@ leChiffre = Jugador {
 felixLeiter = Jugador "Felix Leiter" piernaDeNueves "Whisky"
 
 mesa1 = [jamesBond, leChiffre, felixLeiter]
+mesaSolitario = [jamesBond]
 
 correrTests :: IO ()
 correrTests = hspec $ do
@@ -42,3 +43,10 @@ correrTests = hspec $ do
   describe "Punto 3" $ do
     it "El juego con 4 ases es un poker" $ do
       pokerDeAses `shouldSatisfy` poker
+  describe "Punto 4" $ do
+    it "Alguien se carteo en la mesa1 usando primera def" $ do
+      mesa1 `shouldSatisfy` alguienSeCarteo
+    it "Alguien se carteo en la mesa1 usando segunda def" $ do
+      mesa1 `shouldSatisfy` alguienSeCarteo'
+    it "Nadie se carteo en la mesa de James Bond solito" $ do
+      mesaSolitario `shouldNotSatisfy` alguienSeCarteo
